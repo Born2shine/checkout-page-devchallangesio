@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Checkout Page</title>
+  </head>
+  <body>
+    <section class="section-center">
+      <div class="checkout">
+        <h2 class="checkout-title">
+          Checkout
+        </h2>
+        <div class="checkout-info">
+          <div class="contact-information">
+            <div class="contact-form">
+              <div class="contact-title">
+                Contact infomation
+              </div>
+              <div class="email">
+                <div class="input-field">
+                  <div><label for="country">E-mail code</label></div>
+                  <input type="text" placeholder="Enter your email..." />
+                  <span class="material-icons">
+                    email
+                  </span>
+                </div>
+              </div>
+              <div class="phone">
+                <div class="input-field">
+                  <div><label for="country">Phone</label></div>
+                  <input type="text" placeholder="Enter your phone..." />
+                  <span class="material-icons">
+                    phone
+                  </span>
+                </div>
+              </div>
+              <div class="contact-title shipping-address">
+                Shipping address
+              </div>
+              <div class="name">
+                <div class="input-field">
+                  <div><label for="country">Full name</label></div>
+                  <input type="text" placeholder="Enter your name..." />
+                  <span class="material-icons">
+                    account_circle
+                  </span>
+                </div>
+              </div>
+              <div class="address">
+                <div class="input-field">
+                  <div><label for="country">Address</label></div>
+                  <input type="text" placeholder="Enter your address..." />
+                  <span class="material-icons">
+                    home
+                  </span>
+                </div>
+              </div>
+              <div class="city">
+                <div class="input-field">
+                  <div><label for="country">City</label></div>
+                  <input type="text" placeholder="Enter your city..." />
+                  <span class="material-icons">
+                    apartment
+                  </span>
+                </div>
+              </div>
+              <div class="country-postal">
+                <div class="country">
+                  <div class="input-field">
+                    <div><label for="country">Country</label></div>
+                    <input type="text" placeholder="Enter your country..." />
+                    <span class="material-icons">
+                      apartment
+                    </span>
+                  </div>
+                </div>
+                <div class="postal code">
+                  <div class="input-field">
+                    <div><label for="country">Postal code</label></div>
+                    <input
+                      type="text"
+                      placeholder="Enter your postal code..."
+                    />
+                    <span class="material-icons">
+                      markunread_mailbox
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="" id="" />
+                <span>Save this information for next time</span>
+              </div>
+              <div class="proceed-btn">
+                <button class="btn">Continue</button>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="cart-bag">
+              <!-- single cart -->
+              <div class="single-cart">
+                <div class="item-img">
+                  <img src="images/photo1.png" alt="" />
+                </div>
+                <div class="item-info">
+                  <div class="item-name">Vintage Backbag</div>
+                  <div class="item-price">
+                    <li class="price">&#36;54.99</li>
+                    <li class="price-before">&#36;94.99</li>
+                  </div>
+                  <div class="inc-dec-item">
+                    <div class="dec-item" id="dec_item">-</div>
+                    <div class="item-no" id="item_no">1</div>
+                    <div class="inc-item" id="inc_item">+</div>
+                  </div>
+                </div>
+              </div>
+              <!-- single cart end -->
+
+              <!-- single cart -->
+              <div class="single-cart">
+                <div class="item-img">
+                  <img src="images/photo2.png" alt="" />
+                </div>
+                <div class="item-info">
+                  <div class="item-name">Levi Shoes</div>
+                  <div class="item-price">
+                    <li class="price">&#36;74.99</li>
+                    <li class="price-before">&#36;124.99</li>
+                  </div>
+                  <div class="inc-dec-item">
+                    <div class="dec-item">-</div>
+                    <div class="item-no">1</div>
+                    <div class="inc-item">+</div>
+                  </div>
+                </div>
+              </div>
+              <!-- single cart end -->
+
+              <div class="shipping-info">
+                <hr class="hr-line" />
+                <div class="total-price">
+                  <div class="shipping">Shipping</div>
+                  <div class="price">&#36;19</div>
+                </div>
+                <hr class="hr-line" />
+                <div class="total-price">
+                  <div class="Total">Total</div>
+                  <div class="price">&#36;148.99</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        SpiderTech @ DevChallanges.io
+      </div>
+    </footer>
+    <script>
+      var inc_item = document.querySelector("#inc_item");
+      var item_no = document.querySelector("#item_no");
+      var dec_item = document.querySelector("#dec_item");
+
+      inc_item.addEventListener("click", () => {
+        var new_no = parseInt(item_no.innerHTML) + 1;
+
+        item_no.innerHTML = new_no;
+      });
+      dec_item.addEventListener("click", () => {
+        if (parseInt(item_no.innerHTML) > 0) {
+          new_no = parseInt(item_no.innerHTML) - 1;
+          item_no.innerHTML = new_no;
+        }
+      });
+    </script>
+  </body>
+</html>

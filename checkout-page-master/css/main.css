@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-primary: #f2994a;
+  --clr-white: #ffffff;
+  --clr-black: #4e5150;
+  --clr-black-2: #333333;
+  --clr-black-3: #4f4f4f;
+  --clr-black-4: #828282;
+  --clr-black-5: #a9a9a9;
+  --clr-black-6: #bdbdbd;
+  --clr-black-7: #f2f2f2;
+  --clr-black-8: #e5e5e5;
+  --ff-primary: "Montserrat";
+}
+/* 
+===========
+Global CSS
+===========
+*/
+.section-center {
+  width: 93%;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  display: block;
+}
+body {
+  background: var(--clr-white);
+  font-family: var(--ff-primary);
+}
+.checkout {
+  margin-top: 1rem;
+}
+.checkout-info {
+  display: grid;
+}
+.checkout-title {
+  margin: 1.2rem 0;
+  font-weight: 700;
+}
+.cart {
+  margin-bottom: 2rem;
+}
+.cart-bag {
+  background: var(--clr-black-7);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.single-cart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+.item-img img {
+  border-radius: 1rem;
+}
+.item-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--clr-black);
+}
+.item-price li {
+  list-style: none;
+  display: inline-block;
+  margin: 0.8rem 0;
+  font-weight: 600;
+  padding: 0 0.1rem;
+}
+.price {
+  color: var(--clr-primary);
+  font-size: 0.8rem;
+}
+.price-before {
+  font-size: 0.6rem;
+  text-decoration: line-through;
+}
+.inc-dec-item {
+  width: 90%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  border: 0.01rem solid var(--clr-black-5);
+  border-radius: 0.8rem;
+  padding: 0.6rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.dec-item,
+.inc-item {
+  background: var(--clr-black-8);
+  font-size: 1.4rem;
+  padding: 0 0.6rem;
+  border-radius: 0.3rem;
+}
+.item-no {
+  font-size: 1.1rem;
+  align-self: center;
+}
+.shipping-info {
+  margin-top: 5rem;
+}
+.hr-line {
+  height: 1px;
+  border: none;
+  background: #d0cece;
+  margin: 0.6rem 0;
+}
+.total-price {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.total-price .price {
+  text-align: right;
+  color: var(--clr-black);
+  font-size: 0.7rem;
+}
+/* contact form */
+.contact-information {
+  order: 1;
+  margin-bottom: 2rem;
+}
+.contact-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+.contact-form label {
+  font-size: 0.65rem;
+  font-weight: bold;
+  line-height: 1.9;
+}
+.input-field {
+  position: relative;
+  margin: 0.4rem 0;
+}
+.input-field input {
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  width: 100%;
+  padding: 0.7rem 2rem;
+  border-radius: 0.6rem;
+  border: 0.01rem solid grey;
+}
+.input-field input:focus {
+  outline: none;
+}
+.input-field .material-icons {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  font-weight: 300;
+  color: var(--clr-black-4);
+}
+.shipping-address {
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.check span {
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: var(--clr-black);
+  line-height: 4;
+}
+.proceed-btn {
+  float: right;
+}
+.proceed-btn .btn {
+  font-family: var(--clr-primary);
+  background: var(--clr-primary);
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  border: none;
+  color: var(--clr-white);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+}
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--clr-black-6);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 870px) {
+  .checkout-info {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+  }
+  .contact-information {
+    order: -1;
+  }
+  .input-field input {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 70%;
+  }
+  .checkout-info {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+  }
+  .input-field input {
+    padding: 1rem 2rem;
+  }
+  .item-name {
+    font-size: 1rem;
+  }
+  .price {
+    font-size: 1rem;
+  }
+  .price-before {
+    font-size: 0.7rem;
+  }
+  .contact-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .contact-form label {
+    font-size: 0.7rem;
+  }
+  .check span {
+    font-size: 0.9rem;
+  }
+  .footer {
+    font-size: 0.9rem;
+  }
+}
