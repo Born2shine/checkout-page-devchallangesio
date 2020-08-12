@@ -144,15 +144,25 @@ body {
   position: relative;
   margin: 0.4rem 0;
 }
-.input-field input {
+.input-field input,
+select {
   font-family: var(--ff-primary);
   font-weight: 600;
   width: 100%;
   padding: 0.7rem 2rem;
   border-radius: 0.6rem;
-  border: 0.01rem solid grey;
+  border: 1px solid grey;
 }
-.input-field input:focus {
+.input-field select {
+  background: none;
+  color: var(--clr-black-4);
+  padding: 0.7rem 1.3rem;
+}
+.postal-code input {
+  padding: 0.7rem 1.5rem;
+}
+.input-field input:focus,
+select:focus {
   outline: none;
 }
 .input-field .material-icons {
@@ -162,6 +172,11 @@ body {
   top: 50%;
   font-weight: 300;
   color: var(--clr-black-4);
+}
+.country-postal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 .shipping-address {
   margin-top: 2.5rem;
@@ -205,6 +220,9 @@ body {
   }
   .input-field input {
     padding: 1rem 2rem;
+  }
+  .input-field select {
+    padding: 0.9rem 1.6rem;
   }
 }
 @media screen and (min-width: 1200px) {
